@@ -1,0 +1,82 @@
+.wrapper{
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  grid-gap: 10px;
+  margin: 0 auto;
+}
+.grid{
+  background: #ccc;
+  text-align: center;
+  padding:30px;
+}
+.sidebar{
+  grid-row : 1;
+}
+.result{
+  grid-row : 1;
+}
+
+
+@media only screen and (max-width: 960px) {
+  .wrapper{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+  }
+  .sidebar{
+    grid-row : auto;
+  }
+  .result{
+    grid-row : auto;
+  }
+}
+
+
+
+
+
+.mosiac{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-auto-rows: minmax(200px,auto);
+  grid-gap: 10px;
+  text-align:center;
+  max-width:960px;
+  margin: 10px auto; color:#fff;
+}
+.mosiac div{
+  background: #333;
+  padding:30px;
+}
+.a{
+  grid-column: 1 / 4;
+  grid-row: 1;
+}
+.aa{
+  grid-column: 3 / 4;
+  grid-row: 2/4;
+}
+.aaa{
+  grid-column: 1 / 2;
+  grid-row: 2/4;
+}
+.aaaa{
+  grid-column: 1 / 4;
+  grid-row: 4;
+}
+
+.aaaaa{
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+}
+.nested{
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px,auto);
+ justify-content: center;
+  align-items: center;
+}
+.b{
+  grid: 1 / 2;
+}

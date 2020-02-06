@@ -1,0 +1,5 @@
+<h1>Movies</h1>
+<hr />
+<ul>
+  <li *ngFor="let movie of movies" class="movie" (click)="getDetails(movie)"><span>{{movie}} </span></li>
+</ul>

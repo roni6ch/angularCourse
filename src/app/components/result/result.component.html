@@ -1,0 +1,7 @@
+<div class="loader" *ngIf="loader">Loading...</div>
+<div *ngIf="!loader && (movie | json) == '{}'">Welcome to Movies App</div>
+<div *ngIf="!loader && (movie | json) != '{}'" class="result">
+  <h1>{{movie.caption}}</h1>
+  <h6>{{movie.description}}</h6>
+  <img [src]='movie.poster' />
+</div>
